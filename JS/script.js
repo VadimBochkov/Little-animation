@@ -1,24 +1,32 @@
 "use strict";
 
-let macBook = document.querySelectorAll('.header__img'),
-    title = document.querySelectorAll('.header_title'),
+let macBook = document.querySelector('.header__img'),
+    text = document.querySelector('.header__titel'),
     letter = document.querySelectorAll('.header__text');
 
 function moveLeeter() {
-  let size = 82;
+  let sizeLetter = 82,
+      sizeImg = 1100,
+      opacity = 0;
 
-  let id = setInterval(frame, 34);
+  let id = setInterval(frame, 25);
 
   function frame() {
-    size++;
+    sizeImg-- ;
+    sizeLetter++;
+    opacity++;
 
     for(let i of [0, 1]) {
-      letter[i].style.marginRight = size + 'px'; 
+      letter[i].style.marginRight = sizeLetter + 'px';
     }
-        
-    if (size == 165) {
+
+    text.style.opacity = opacity + '%';
+    macBook.style.width = sizeImg + 'px';
+
+    
+    if (sizeImg == 950 || sizeLetter == 155) {
       clearInterval(id);
-    }    
+    }
   }
 }
 

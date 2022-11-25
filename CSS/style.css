@@ -422,62 +422,15 @@ body {
   z-index: 0;
 }
 
-.header__text_opacity {
-  animation-name: opacity;
-  animation-duration: 2s;
-}
-
-@keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 100;
-  }
-}
-
 .header__text {
-  opacity: 0;
   margin-right: 82px;
-  animation-name: text-ops;
-  animation-duration: 8s;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
 }
 
 .header__text:last-child {
   margin-right: 0;
 }
 
-@keyframes text-ops {
-  0% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 50;
-  }
-
-  100% {
-    opacity: 100;
-  }
-}
-
 .header__img {
-  transform: translate(-23px, -228px);
-  width: 950px;
-  animation-name: img-size;
-  animation-duration: 4s;
+  transform: translate(-23px, -226px);
   z-index: 10;
-}
-
-@keyframes img-size {
-  0% {
-    width: 1100px;
-  }
-
-  100% {
-    width: 950px;
-  }
 }
